@@ -76,7 +76,6 @@ The answer is that you cannot reliably read the response from requesting the ori
 
 The answer to my second question is even more complex. After some experimentation, there is no easy way to get the adapter to ask the controller for its origin again once it leaves the repeated *origin* state. This is disappointing because ideally, Dolphin would do this any time a game is started. There is, however, *a* way. The *Hard Reset* command (dubbed by the GBATemp thread as the *Kill* command), was given the description: "Turns off the adapter and requires it to be unplugged and reconnect to begin working again". This is actually not true. This command simply requires the USB interface to be reinitialized before using the adapter again. By sending the *Hard Reset* command and reinitializing the USB interface, controllers will be put back into the repeated *origin* state.
 
-
 ## Conclusion
 
 In summary, utilizing the *origin* command properly is feasible, but non-trivial. To correctly ask for a controller's origin, a driver needs to:
