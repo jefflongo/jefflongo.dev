@@ -93,15 +93,15 @@ The third byte describes the current status of the controller. This byte is cont
 ![Status command](/assets/img/gc_controller_reverse_engineering/status.jpg)
 _Status command_
 
-The status command is the most important command. It sends the console the current state of the buttons, joysticks, and shoulders, controls the format they are sent in, and controls rumble. In contrast to the previous commands, the status command has 2 argument bytes that are sent by the console after the command byte. The first argument is the rumble mode and the second argument byte is the poll mode. 
+The status command is the most important command. It sends the console the current state of the buttons, joysticks, and shoulders, controls the format they are sent in, and controls rumble. In contrast to the previous commands, the status command has 2 argument bytes that are sent by the console after the command byte. The first argument is the poll mode and the second argument byte is the rumble mode.
 
 ### Status Command Argument Bytes
 
 | Byte  | Description |
 | :---: | :---------- |
 |   1   | Command     |
-|   2   | Rumble mode |
-|   3   | Poll mode   |
+|   2   | Poll mode   |
+|   3   | Rumble mode |
 
 
 ### Rumble Mode
